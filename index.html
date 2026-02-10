@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My Valentine 💜</title>
+
+<style>
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ===== BACKGROUND ===== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fbc2eb, #a855f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ===== CARD ===== */
+.container {
+    background: #fff;
+    width: 90%;
+    max-width: 360px;
+    padding: 25px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    animation: fadeIn 1s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADINGS ===== */
+h2, h3 {
+    color: #6b21a8;
+    margin-bottom: 15px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+    font-size: 18px;
+    padding: 12px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+#yesBtn {
+    background: linear-gradient(135deg, #a855f7, #d946ef);
+    color: white;
+}
+
+#noBtn {
+    background: #9ca3af;
+    color: white;
+    position: absolute;
+}
+
+/* ===== CAT IMAGE ===== */
+.cat {
+    width: 180px;
+    margin: 15px 0;
+}
+
+/* ===== HEART ===== */
+#heart {
+    font-size: 55px;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+/* ===== LETTER ===== */
+#letterBox p {
+    font-size: 15px;
+    color: #4c1d95;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* ===== FLOATING HEARTS ===== */
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- QUESTION -->
+<div class="container" id="questionBox">
+    <h2>Will you be my Valentine? 💜</h2>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+</div>
+
+<!-- CAT -->
+<div class="container hidden" id="catBox">
+    <h2>Yay!! 😍</h2>
+    <img src="cat.png" alt="Cute Cat" class="cat" />
+    <p>Click the purple heart 💜</p>
+    <div id="heart">💜</div>
+</div>
+
+<!-- LETTER -->
+<div class="container hidden" id="letterBox">
+    <h3>My Letter For You 💌</h3>
+    <p>
+        First of all, this is our first Valentine’s together,
+        and I hope it won’t be the last 💜
+    </p>
+    <p>
+        Even if we sometimes have misunderstandings,
+        I hope we choose to fix them instead of ending everything.
+    </p>
+    <p>
+        I’m sorry for the things I do that hurt you.
+        Please help me become better 😞
+    </p>
+    <p>
+        I love you so much baby 💜💜💜
+    </p>
+    <p><b>Happy Valentine’s Day 😘</b></p>
+</div>
+
+<script>
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const questionBox = document.getElementById("
